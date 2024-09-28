@@ -343,8 +343,9 @@ function processSubmission() {
 
                 if(invalidInput) {
                     onCooldown = true;
-                    setTimeout(endAnimation,4000)
+
                     alert(alertText);
+                    setTimeout(endAnimation,3600);
                     
                     document.body.style = "background-image: url('Bocchi the Glitter orb failure.gif'); background-position: right top; background-repeat: no-repeat; margin-right: 397px;";
                     document.getElementById("BocchiFormMessage").innerHTML = "Ok lemme tell the orb... OH GOD I THINK YOU DID SOMETHING WRONG THE ORB IS GETTING VERY ANGRY LOOK OUT!!!"
