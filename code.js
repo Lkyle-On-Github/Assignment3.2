@@ -53,6 +53,9 @@ function initializeStrings() {
 
     //Ensures that the user can't input until the orb has finished calculating
     onCooldown = false;
+
+    //whether or not the form is active
+    form = false;
 }
 //#endregion
 
@@ -241,12 +244,14 @@ function runOutput() {
 
     document.getElementById("fulloutput").innerHTML = fullOutput;
     confirmation = true;
-    document.getElementById("Bocchi2ndMessage").innerHTML = "Alright well thats all you asked for but dont worry you can go again if you want. Just type Y for yes, and if you are totally done type N so I can let the orb know."
+    document.getElementById("Bocchi2ndMessage").innerHTML = "Alright well thats all you asked for but dont worry you can go again if you want. Just type Y for yes, and if you are totally done type N so I can let the orb know.";
         
 }
 
 function resetImage() {
+    if(form == false) {
     document.body.style = "background-image: url('Bocchi the Glitter Pondering her orb.gif');";
+    }
 }
 //#endregion
 
@@ -254,9 +259,14 @@ function resetImage() {
 
 //Changes to the Strings page upon starting the account submission
 function accountSetup() {
+    if(onCooldown == false) {
     accountSetupStrings();
+    } else {
+        document.getElementById("Bocchi2ndMessage").innerHTML = "Please don't try to set up an account while the orb is calculating. its really quite rude."
+    }
 }
 function accountSetupStrings() {
+    form = true;
     //disables input for top text entry and register button
     document.getElementById("GGOrbInterface").inert = true;
     document.getElementById("Account Button one").inert = true;
@@ -264,7 +274,7 @@ function accountSetupStrings() {
     //Changes Bocchi messages
     document.getElementById("BocchiGreeting").innerHTML = "Uhh, you want to &#34Register an account with the orb?&#34 What does that even mean... ";
     document.getElementById("Bocchi2ndMessage").innerHTML = "ok well the orb says to type your First Name into that first box below and then your Last name into that second one and your zip code into that third one! Oh wait thats the submission form right there! ok Im gonna head down there now"
-    
+    document.getElementById("fulloutput").innerHTML = "";
     //activates the account creation form
     document.getElementById("AccountCreationForm").src = "accountForm.html" ;
     document.getElementById("AccountCreationForm").width = "600px;";
