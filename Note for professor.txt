@@ -1,6 +1,6 @@
 I really hope you read this because Its a weekend which means we probably wont be able to schedule a meeting before the assignment due dates theres a bit I need to say.
 
-Firstly, on the topic of this submission, I would like to justify some of my decisions because you haven't been consistent in properly interpreting the assignment rubrics. if you dont care about that and don't want to read this please read the other 2 topics becasue they are much more important.
+Firstly, on the topic of this submission, I would like to justify some of my decisions. if you dont care about that and don't want to read this please read the other 2 topics becasue they are much more important.
 1. the button to activate the form is purely for visuals and the gag where Bocchi seems confused about what you are doing. There is no reason that this should count against my grade.
 2. Nowhere in the rubric does it say the palendrome checker has to remain functional during and after the form submission. I decided to disable it intentionally, this is not a bug.
 3. We are forced to use the same html file from the last assignment, so even if you think I "did not code anything related to the requirements" for the last assignment, the code still works exactly how I intended it to and the only thing that should matter about it is whether or not my implementation of the account creation broke it.
